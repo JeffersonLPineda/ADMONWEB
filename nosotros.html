@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros | BytechFix</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .pdf-container {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .pdf-container iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 12px;
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- POPUP (AHORA BIEN UBICADO) -->
+<div id="popup" class="popup hidden">
+    <div class="popup-content">
+        <h2 id="popup-title">Mensaje</h2>
+        <p id="popup-text"></p>
+        <button class="btn" onclick="cerrarPopup()">Aceptar</button>
+    </div>
+</div>
+
+<header>
+    <nav>
+        <a href="index.html" class="logo">By<span>Tech</span></a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Catálogo</a></li>
+            <li><a href="nosotros.html" class="active">Sobre Nosotros</a></li>
+            <li><a href="checkout.html">Carrito (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <h1 class="section-title">Quiénes Somos</h1>
+    
+    <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 40px;">
+        <h3 style="color: var(--primary-color); margin-bottom: 15px;">Misión</h3>
+        <p style="color: var(--text-light); margin-bottom: 15px;">
+            Calidad en cada producto, confianza en cada servicio.
+        </p>
+
+        <h3 style="color: var(--primary-color); margin-bottom: 15px;">Visión</h3>
+        <p style="color: var(--text-light);">
+            Hacer que la tecnología personal funcione sin interrupciones, con presencia creciente en múltiples localidades y países.
+        </p>
+    </div>
+
+    <h2 class="section-title">Documento de Presentación</h2>
+
+    <!-- GOOGLE DOCS EMBEBIDO -->
+    <div class="pdf-container">
+        <iframe 
+            src="https://docs.google.com/document/d/ID_DEL_DOCUMENTO/preview"
+            title="Documento de presentación Bytech">
+        </iframe>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Bytech. Todos los derechos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | Bytech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- POPUP -->
+<div id="popup" class="popup hidden">
+    <div class="popup-content">
+        <h2 id="popup-title">Mensaje</h2>
+        <p id="popup-text"></p>
+        <button class="btn" onclick="cerrarPopup()">Aceptar</button>
+    </div>
+</div>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">By<span>Tech</span></a>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html" class="active">Catálogo</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="checkout.html" class="active">Carrito (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="section-title">Componentes y Hardware</h1>
+        <div class="grid">
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="https://image.www.ipros.com/public/product/image/501/2001146271/IPROS6355829165525373428.png?w=280&h=280">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Laptop Gamer Titan RTX 4070</h3>
+                    <p class="card-desc">Intel i9, 32GB RAM, 1TB SSD.</p>
+                    <div class="card-footer">
+                        <span class="price">Q8,499</span>
+                        <button class="btn" onclick="agregarAlCarrito('Laptop Gamer Titan RTX 4070', 8499)">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="https://www.serialcenter.com.py/fotos/thumbs/2_monitor-27-samsung-odyssey-g5-ls27cg552enxza-curvoqhdhdmi165hz-9560.png" alt="Monitor Curvo 27 144Hz">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Monitor Curvo 27" 144Hz</h3>
+                    <p class="card-desc">Panel IPS, 1ms respuesta.</p>
+                    <div class="card-footer">
+                        <span class="price">Q2,190</span>
+                        <button class="btn" onclick="agregarAlCarrito('Monitor Curvo 27 144Hz', 2190)">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="https://www.pccompu.com.uy/imgs/productos/productos31_45548.jpg" alt="Teclado Mecánico RGB">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Teclado Mecánico RGB</h3>
+                    <p class="card-desc">Switches Cherry MX Red.</p>
+                    <div class="card-footer">
+                        <span class="price">Q250</span>
+                        <button class="btn" onclick="agregarAlCarrito('Teclado Mecánico RGB', 250)">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcdqa595MONxsiNAvE_gpS_P9OJCw5ClG22w&s" alt="Mouse Inalámbrico Pro">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Mouse Inalámbrico Pro</h3>
+                    <p class="card-desc">Sensor óptico de 16K DPI.</p>
+                    <div class="card-footer">
+                        <span class="price">Q110</span>
+                        <button class="btn" onclick="agregarAlCarrito('Mouse Inalámbrico Pro', 110)">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="https://img-prd-pim.poorvika.com/prodvarval/Samsung-990-pro-1tb-nvme-ssd-internal-storage-device-black-1tb-Front-View-Thumbnail.png" alt="SSD NVMe 1TB PCIe 4.0">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">SSD NVMe 1TB PCIe 4.0</h3>
+                    <p class="card-desc">Velocidades de hasta 7000 MB/s.</p>
+                    <div class="card-footer">
+                        <span class="price">Q850</span>
+                        <button class="btn" onclick="agregarAlCarrito('SSD NVMe 1TB PCIe 4.0', 850)">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="https://cdna.pcpartpicker.com/static/forever/images/product/d031b41e8948f8b9499ec37c6b33bd91.256p.jpg" alt="RAM 32GB DDR5">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">RAM 32GB (2x16) DDR5</h3>
+                    <p class="card-desc">6000MHz CL30 para máximo FPS.</p>
+                    <div class="card-footer">
+                        <span class="price">Q1350</span>
+                        <button class="btn" onclick="agregarAlCarrito('RAM 32GB (2x16) DDR5', 1350)">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="https://www.infinit.com.uy/imgs/productos/productos31_34612.jpg" alt="Fuente de Poder 850W">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Fuente de Poder 850W</h3>
+                    <p class="card-desc">Certificación 80+ Gold, modular.</p>
+                    <div class="card-footer">
+                        <span class="price">Q850</span>
+                        <button class="btn" onclick="agregarAlCarrito('Fuente de Poder 850W', 850)">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="https://media.spdigital.cl/thumbnails/products/uwm69ber_b93f4ee1_thumbnail_256.png" alt="Gabinete ATX Flow">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Gabinete ATX Flow</h3>
+                    <p class="card-desc">Cristal templado y 4 ventiladores.</p>
+                    <div class="card-footer">
+                        <span class="price">Q1050</span>
+                        <button class="btn" onclick="agregarAlCarrito('Gabinete ATX Flow', 1050)">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="https://imagedelivery.net/wExMwKP1304LY2ReXCyTPg/dcd3d2ff-5ed3-465d-27ba-23120eda6800/w=256,h=256,fit=crop" alt="Enfriamiento Líquido 240mm">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Enfriamiento Líquido 240mm</h3>
+                    <p class="card-desc">Pantalla LCD personalizable.</p>
+                    <div class="card-footer">
+                        <span class="price">Q940</span>
+                        <button class="btn" onclick="agregarAlCarrito('Enfriamiento Líquido 240mm', 940)">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="https://www.pccompu.com.uy/imgs/productos/productos31_36882.jpg" alt="Cámara Web Stream Pro">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Cámara Web Stream Pro</h3>
+                    <p class="card-desc">Resolución 1080p a 60fps.</p>
+                    <div class="card-footer">
+                        <span class="price">Q500</span>
+                        <button class="btn" onclick="agregarAlCarrito('Cámara Web Stream Pro', 500)">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <h2 class="section-title" style="margin-top: 60px;">Servicios Técnicos Especializados</h2>
+        <div class="grid">
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="https://cdn-icons-png.flaticon.com/256/18101/18101175.png" alt="Mantenimiento Preventivo">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Mantenimiento Preventivo</h3>
+                    <p class="card-desc">Limpieza de hardware y cambio de pasta térmica.</p>
+                    <div class="card-footer">
+                        <span class="price">Q75</span>
+                        <button class="btn" onclick="agregarAlCarrito('Mantenimiento Preventivo', 75)">Agendar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="https://www.strongrecovery.com/images/formatowanie-dysku.webp" alt="Formateo y Optimización OS">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Formateo y Optimización OS</h3>
+                    <p class="card-desc">Instalación limpia de Windows/Linux + Drivers.</p>
+                    <div class="card-footer">
+                        <span class="price">Q100</span>
+                        <button class="btn" onclick="agregarAlCarrito('Formateo y Optimización OS', 100)">Agendar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="https://www.quilareforensic.es/wp-content/uploads/2024/02/Hard-disk-drive.png" alt="Recuperación de Datos">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Recuperación de Datos</h3>
+                    <p class="card-desc">Rescate de archivos en discos dañados.</p>
+                    <div class="card-footer">
+                        <span class="price">Desde Q200</span>
+                        <button class="btn" onclick="agregarAlCarrito('Recuperación de Datos', 200)">Cotizar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="https://cdna.pcpartpicker.com/static/forever/images/product/e73805f51f5793beebb56be42fa04a62.256p.jpg" alt="Ensamblado de PC">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Ensamblado de PC</h3>
+                    <p class="card-desc">Armamos la PC de tus sueños con gestión de cables.</p>
+                    <div class="card-footer">
+                        <span class="price">Q200</span>
+                        <button class="btn" onclick="agregarAlCarrito('Ensamblado de PC', 200)">Agendar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/antivirus-icon-svg-download-png-2840945.png" alt="Desinfección de Malware">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Desinfección de Malware</h3>
+                    <p class="card-desc">Eliminación de virus, troyanos y ransomware.</p>
+                    <div class="card-footer">
+                        <span class="price">Q150</span>
+                        <button class="btn" onclick="agregarAlCarrito('Desinfección de Malware', 150)">Agendar</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bytech. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

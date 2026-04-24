@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bytech | Computación y Soporte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- POPUP -->
+<div id="popup" class="popup hidden">
+    <div class="popup-content">
+        <h2 id="popup-title">Mensaje</h2>
+        <p id="popup-text"></p>
+        <button class="btn" onclick="cerrarPopup()">Aceptar</button>
+    </div>
+</div>
+<body>
+    <script src="script.js"></script>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">By<span>Tech</span></a>
+            <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="productos.html">Catálogo</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="checkout.html" class="active">Carrito (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>El máximo rendimiento para tu equipo</h1>
+        <p>Venta de componentes premium y servicio técnico especializado.</p>
+        <a href="productos.html" class="btn" style="padding: 15px 30px; font-size: 1.1rem;">Ver Catálogo Completo</a>
+    </section>
+
+    <main class="container">
+        <h2 class="section-title">Nuestras Recomendaciones</h2>
+        <div class="grid">
+            <article class="card">
+                <div class="card-img">
+                    <img src="https://image.www.ipros.com/public/product/image/501/2001146271/IPROS6355829165525373428.png?w=280&h=280">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Laptop Gamer Titan RTX 4070</h3>
+                    <p class="card-desc">Potencia extrema para gaming y productividad. Pantalla 165Hz y 32GB RAM.</p>
+                    <div class="card-footer">
+                        <span class="price">Q8,499</span>
+                        <button class="btn" onclick="agregarAlCarrito('Laptop Gamer Titan RTX 4070', 8499)">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="https://www.serialcenter.com.py/fotos/thumbs/2_monitor-27-samsung-odyssey-g5-ls27cg552enxza-curvoqhdhdmi165hz-9560.png" alt="Monitor Curvo 27 144Hz">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Monitor Curvo 27" 144Hz</h3>
+                    <p class="card-desc">Inmersión total con panel IPS, 1ms de respuesta y colores vibrantes.</p>
+                    <div class="card-footer">
+                        <span class="price">Q289</span>
+                        <button class="btn" onclick="agregarAlCarrito('Monitor Curvo 27 144Hz', 2190)">Añadir</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="https://cdn-icons-png.flaticon.com/256/18101/18101175.png" alt="Mantenimiento Preventivo"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Servicio: Mantenimiento Profundo</h3>
+                    <p class="card-desc">Limpieza completa, cambio de pasta térmica de alto rendimiento y gestión de cables.</p>
+                    <div class="card-footer">
+                        <span class="price">Q75</span>
+                        <button class="btn" onclick="agregarAlCarrito('Mantenimiento Preventivo', 75)">Agendar</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bytech. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
