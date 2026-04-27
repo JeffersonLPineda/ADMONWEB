@@ -44,12 +44,12 @@ function renderizarCarrito() {
             listaHtml.innerHTML += `
                 <div class="item-carrito">
                     <span>${prod.nombre}</span>
-                    <span class="precio-item">$${prod.precio}</span>
+                    <span class="precio-item">Q${prod.precio}</span>
                 </div>
             `;
         });
     }
-    totalHtml.innerText = `$${total}`;
+    totalHtml.innerText = `Q${total}`;
 }
 
 // Manejar el proceso de pago
