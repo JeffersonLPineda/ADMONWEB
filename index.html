@@ -6,19 +6,39 @@
     <title>Bytech | Computación y Soporte</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<!-- POPUP -->
-<div id="popup" class="popup hidden">
-    <div class="popup-content">
-        <h2 id="popup-title">Mensaje</h2>
-        <p id="popup-text"></p>
-        <button class="btn" onclick="cerrarPopup()">Aceptar</button>
-    </div>
-</div>
 <body>
+
+    <!-- POPUP -->
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <h2 id="popup-title">Mensaje</h2>
+            <p id="popup-text"></p>
+            <button class="btn" onclick="cerrarPopup()">Aceptar</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+
     <header>
         <nav>
-            <a href="index.html" class="logo">By<span>Tech</span></a>
+            <div class="nav-left">
+                <a href="index.html" class="logo">By<span>Tech</span></a>
+
+                <a href="https://www.instagram.com/bytechguatemala/" target="_blank">
+                    <img src="img/instagram.png"
+                        alt="Instagram"
+                        class="nav-icon">
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=61572126693151" target="_blank">
+                    <img src="img\facebook.png"
+                        alt="Instagram"
+                        class="nav-icon">
+                </a>
+            </div>
+
+
+
             <ul>
                 <li><a href="index.html" class="active">Inicio</a></li>
                 <li><a href="nosotros.html">Sobre Nosotros</a></li>
@@ -37,9 +57,10 @@
     <main class="container">
         <h2 class="section-title">Nuestras Recomendaciones</h2>
         <div class="grid">
+
             <article class="card">
                 <div class="card-img">
-                    <img src="https://image.www.ipros.com/public/product/image/501/2001146271/IPROS6355829165525373428.png?w=280&h=280">
+                    <img src="https://image.www.ipros.com/public/product/image/501/2001146271/IPROS6355829165525373428.png?w=280&h=280" alt="Laptop Gamer Titan RTX 4070">
                 </div>
                 <div class="card-content">
                     <h3 class="card-title">Laptop Gamer Titan RTX 4070</h3>
@@ -67,7 +88,8 @@
 
             <article class="card">
                 <div class="card-img">
-                    <img src="https://cdn-icons-png.flaticon.com/256/18101/18101175.png" alt="Mantenimiento Preventivo"></div>
+                    <img src="https://cdn-icons-png.flaticon.com/256/18101/18101175.png" alt="Mantenimiento Preventivo">
+                </div>
                 <div class="card-content">
                     <h3 class="card-title">Servicio: Mantenimiento Profundo</h3>
                     <p class="card-desc">Limpieza completa, cambio de pasta térmica de alto rendimiento y gestión de cables.</p>
@@ -77,6 +99,33 @@
                     </div>
                 </div>
             </article>
+
+        </div>
+    </main>
+
+    <main class="container">
+        <div class="grid2" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 40px;">
+
+            <img src="https://www.svgrepo.com/show/526085/phone-calling.svg" style="width: 75px; height: auto; margin-top: 10px;"> 
+            <div class="celda">
+                <h3 style="color: var(--primary-color);">Atención al Cliente</h3>
+                <p>Lunes a Sábado de 8:30 a 18 hrs.</p>
+                <b>(+502) 3464-0276</b>
+            </div>
+
+            <img src="https://www.svgrepo.com/show/431393/whatsapp.svg" style="width: 85px; height: auto;"> 
+            <div class="celda">
+                <h3 style="color: var(--primary-color);">WhatsApp</h3>
+                <p>Lunes a Viernes de 8 a 20 hrs. fin de semana y días festivos de 9 a 19 hrs.</p>
+                <b>(+502) 5564-1240</b>
+            </div>
+
+            <img src="https://www.svgrepo.com/show/431496/building-4.svg" style="width: 90px; height: auto;"> 
+            <div class="celda">
+                <h3 style="color: var(--primary-color);">Ubicación</h3>
+                <p>Encuéntranos en la 7ma calle,<br>6ta avenida 6-84 en Amatitlán</p>
+            </div>
+
         </div>
     </main>
 

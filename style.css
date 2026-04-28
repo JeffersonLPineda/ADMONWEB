@@ -38,6 +38,18 @@ nav {
     align-items: center;
 }
 
+.nav-icon {
+    margin-top: 10px;
+    width: 25px;
+    height: auto;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .logo {
     color: white;
     font-size: 1.5rem;
@@ -92,6 +104,8 @@ nav ul li a:hover, nav ul li a.active {
     padding: 40px 20px;
 }
 
+
+
 .section-title {
     text-align: center;
     font-size: 2rem;
@@ -103,6 +117,16 @@ nav ul li a:hover, nav ul li a.active {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 70px 230px 70px 260px 70px 260px;
+    gap: 30px;
+}
+
+.celda {
+    border: 0px solid black;
 }
 
 /* Tarjetas de Producto (UI/UX) */
